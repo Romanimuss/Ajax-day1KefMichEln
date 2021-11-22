@@ -1,0 +1,4 @@
+
+
+AJAX stands for Asynchronous JavaScript and XML. 
+We can make requests without having to refresh the page, making our sites seem dynamic.

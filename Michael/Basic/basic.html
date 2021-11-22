@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic 1</title>
+  </head>
+  <body>
+    <h2>Content of text file below</h2>
+    <div>
+      <p id="content"></p>
+    </div>
+    <button type="button" onclick="load()">See content</button>
+
+    <script>
+      function load() {
+        let ajReq = new XMLHttpRequest();
+        ajReq.open("GET", "text-data.txt", true);
+        ajReq.onload = function () {
+          if (this.status == 200) {
+            document.getElementById("content").innerHTML = this.responseText;
+          }
+        };
+        ajReq.send();
+      }
+    </script>
+  </body>
+</html>
